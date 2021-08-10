@@ -2,7 +2,9 @@
   <h1>My Tasks</h1>
   <ol>
   <% @tasks.each do |task|%>
-    <li><%= link_to task.title, task_path(task) %></li>
+    <li><%= link_to task.title, task_path(task)%> •
+    <%= link_to "🗑", task_path(task), method: :delete, data: { confirm: "Are you sure?" }%></li>
   <% end %>
   </ol>
+  <%= link_to "➕ Add a new task", new_task_path %>
 </div>
