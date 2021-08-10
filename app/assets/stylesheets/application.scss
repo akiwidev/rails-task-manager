@@ -1,0 +1,31 @@
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import './components/list';
+@import './components/form';
+@import './components/show';
+
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+  color: #303030;
+  margin: 8px;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: #303030;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 8px;
+}
+
+a:hover {
+ color: #BEBEBE;
+ font-family: Arial, Helvetica, sans-serif;
+ margin: 8px;
+}

@@ -1,5 +1,12 @@
-<div class="container">
-  <h1>Edit Task</h1>
+<h1>Edit Task</h1>
+<div class="form-container">
   <%= render 'tasks/form' %>
-  <p>Completed</p>
+  <% if @task.completed? %>
+    <i class="fas fa-check-square"> Mark as done</i>
+  <% else %>
+    <i class="fas fa-square"></i>
+  <% end %>
 </div>
+<%= link_to (tasks_path) do %>
+  <i class="fas fa-undo-alt"> Back to tasks</i>
+<% end %>

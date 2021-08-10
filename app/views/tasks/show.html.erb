@@ -1,7 +1,13 @@
-<div class="container">
-  <h1><%= @task.title %></h1>
+<h1><%= @task.title %></h1>
+<div class="show-container">
   <p><%= @task.details %></p>
   <p>This task is completed</p>
-  <%= link_to "Edit this task", edit_task_path %>
-  <%= link_to "Back to list", tasks_path %>
+</div>
+<div class="show-footer">
+  <%= link_to (edit_task_path) do%>
+    <i class="fas fa-edit"> Edit</i>
+  <% end %>
+  <%= link_to (tasks_path) do %>
+    <i class="fas fa-undo-alt"> Back to tasks</i>
+  <% end %>
 </div>
