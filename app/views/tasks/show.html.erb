@@ -1,7 +1,11 @@
 <h1><%= @task.title %></h1>
 <div class="show-container">
   <p><%= @task.details %></p>
-  <p>This task is completed</p>
+  <% if @task.completed? %>
+    <i class="fas fa-check-square"> Mark as done</i>
+  <% else %>
+    <i class="fas fa-square"> Mark as done</i>
+  <% end %>
 </div>
 <div class="show-footer">
   <%= link_to (edit_task_path) do%>
